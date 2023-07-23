@@ -1,0 +1,207 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+}
+* {
+	font-family: arial, sans-serif;
+	box-sizing: border-box;
+}
+body {
+	background: url(images/bg-desktop.svg) no-repeat top hsl(257, 40%, 49%);
+	background-attachment: fixed;
+	background-size: contain;
+}
+.container {
+	min-height: 100vh;
+}
+.miniContainer {
+	min-height: 100vh;
+	display: flex;
+}
+.div1 {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.div2 {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	padding: 3rem;
+	position: relative;
+}
+.logo {
+	padding: 2rem 2rem 0 2rem;
+}
+.logo img {
+	display: block;
+	max-width: 100%;
+}
+.huddle-img {
+	padding: 2rem;
+}
+.huddle-img img {
+	display: block;
+	width: 100%;
+}
+.socialdiv {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	align-items: center;
+	position: absolute;
+	bottom: 4rem;
+	right: 2rem;
+}
+.icon {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	clip-path: circle(50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 7px;
+	background: white;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.icon:hover {
+	border: none;
+	background: hsl(300, 69%, 71%);
+	transition: all 0.3s ease-in-out;
+}
+.icon img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.btn {
+	width: 30%;
+	padding: 3%;
+	border-radius: 30px;
+	border: none;
+	font-size: 2vh;
+	color: hsl(257, 40%, 49%);
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.btn:hover {
+	background: hsl(300, 69%, 71%);
+	color: white;
+	transition: all 0.3s ease-in-out;
+}
+.hd {
+	font-size: 6vh;
+	color: white;
+	text-shadow: 1px 1px 3px black;
+}
+.txt {
+	font-size: 4vh;
+	color: white;
+}
+
+@media screen and (max-width: 1000px) {
+	.miniContainer {
+		flex-direction: column;
+	}
+	.div1, .div2 {
+		width: 100%;
+	}
+	.div2 {
+		align-items: center;
+	}
+	.logo img {
+		max-width: 50%;
+	}
+	.btn {
+		width: 160px;
+		padding: 10px;
+		font-size: 14px;
+	}
+	.hd, .txt {
+		text-align: center;
+	}
+	.hd {
+		font-size: 20px;
+	}
+	.txt {
+		font-size: 16px;
+	}
+	.socialdiv {
+		position: initial;
+		margin-top: 1rem;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	body {
+		background: url(images/bg-mobile.svg) no-repeat hsl(257, 40%, 49%);
+		background-attachment: fixed;
+		background-position: top;
+		background-size: contain;
+	}
+	.miniContainer {
+		flex-direction: column;
+	}
+	.div1, .div2 {
+		width: 100%;
+	}
+	.div2 {
+		align-items: center;
+	}
+	.logo img {
+		max-width: 50%;
+	}
+	.btn {
+		width: 160px;
+		padding: 10px;
+		font-size: 14px;
+	}
+	.hd, .txt {
+		text-align: center;
+	}
+	.hd {
+		font-size: 20px;
+	}
+	.txt {
+		font-size: 16px;
+	}
+	.socialdiv {
+		position: initial;
+		margin-top: 1rem;
+	}
+}
+
+@media screen and (min-height: 1000px) {
+	.div2 {
+		gap: 3rem;
+		padding: 5rem;
+		justify-content: center;
+	}
+	.socialdiv {
+		position: initial;
+		justify-content: center;
+		gap: 2rem;
+	}
+	.icon {
+		width: 40px;
+		height: 40px;
+	}
+	.btn {
+		border-radius: 70px;
+		font-size: 1.5vh;
+		width: 20%;
+	}
+	.hd {
+		font-size: 3vh;
+	}
+	.txt {
+		font-size: 2vh;
+	}
+}
